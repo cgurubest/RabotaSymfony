@@ -1,0 +1,63 @@
+rabota_order:
+    resource: "@RabotaBundle/Controller/OrderController.php"
+    type:     annotation
+
+rabota_product:
+    resource: "@RabotaBundle/Controller/ProductController.php"
+    type:     annotation
+
+rabota_order:
+    resource: "@RabotaBundle/Controller/OrderController.php"
+    type:     annotation
+
+rabota_product:
+    resource: "@RabotaBundle/Controller/ProductController.php"
+    type:     annotation
+
+rabota_order:
+    resource: "@RabotaBundle/Controller/OrderController.php"
+    type:     annotation
+
+rabota_product:
+    resource: "@RabotaBundle/Controller/ProductController.php"
+    type:     annotation
+
+rabota_order:
+    resource: "@RabotaBundle/Controller/OrderController.php"
+    type:     annotation
+
+rabota_product:
+    resource: "@RabotaBundle/Controller/ProductController.php"
+    type:     annotation
+
+rabota_order:
+    resource: "@RabotaBundle/Controller/OrderController.php"
+    type:     annotation
+
+rabota_product:
+    resource: "@RabotaBundle/Controller/ProductController.php"
+    type:     annotation
+
+rabota_product:
+    resource: "@RabotaBundle/Controller/ProductController.php"
+    type:     annotation
+
+rabota_product:
+    resource: "@RabotaBundle/Controller/ProductController.php"
+    type:     annotation
+
+rabota_order:
+    resource: "@RabotaBundle/Controller/OrderController.php"
+    type:     annotation
+
+rabota_product:
+    resource: "@RabotaBundle/Controller/ProductController.php"
+    type:     annotation
+
+rabota:
+    resource: "@RabotaBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation

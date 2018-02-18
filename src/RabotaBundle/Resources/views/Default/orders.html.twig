@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Products <span><a href="{{ path('product_new') }}" class="btn btn-default">+</a></span></h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>See</th>
+                <th>+</th>
+            </tr>
+        </thead>
+        <tbody>
+        <form id="products">
+        {% for product in products %}
+            <tr>
+                <td>{{ product.name }}</td>
+                <td>{{ product.price }}</td>
+                <td><input type="number" value="1" name="{{product.id}}" class="product"></td>
+                <td><a href="{{ path('product_show', { 'id': product.id }) }}" class="btn btn-default">View</a></td>
+                <td><a href="{{ path('product_show', { 'id': product.id }) }}" class="btn btn-default">Edit</a></td>
+                <td><a href="{{ path('product_show', { 'id': product.id }) }}" class="btn btn-default">Delete</a></td>
+                <td><a href="{{ path('product_show', { 'id': product.id }) }}" class="btn btn-success">Купить</a></td>
+            </tr>
+        {% endfor %}
+        </form>
+        </tbody>
+
+    </table>
+
+    {#<p><a href="{{ path('product_new') }}" class="btn btn-success new-order">Оформить заказ</a></p>#}
+    <p><a href="#" class="btn btn-success new-order">Оформить заказ</a></p>
+{% endblock %}
+
+
+{% block javascripts %}
+    <script src="https://yastatic.net/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+        $(".new-order").click(function() {
+            $.post("{{ (path('order_new')) }}", $("#products").serialize(), function()
+            {
+                alert('Заказ добавлен');
+            });
+        });
+    </script>
+{% endblock %}
