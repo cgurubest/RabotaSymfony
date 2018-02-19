@@ -10,132 +10,120 @@ use RabotaBundle\Entity\Product;
 
 class DefaultController extends Controller
 {
-    public function indexAction()
-    {
-        return $this->render('RabotaBundle:Default:products.html.twig');
-    }
-
-    public function rabotaAction()
-    {
-        return $this->render('RabotaBundle:Default:rabota.html.twig');
-    }
-
-    public function saveProductAction()
-    {
-        $em = $this->getDoctrine()->getManager();
-        $product = new Product();
-        $product->setName('Product_'.rand(0,100000));
-        $product->setPrice('100');
-        $em->persist($product);
-        $em->flush();
-
-        dump($product->getId());
-
-        return $this->render('RabotaBundle:Default:rabota.html.twig');
-    }
-
-
-    public function addProductToOrderAction($order_id = 1 ){
-
-        $em = $this->getDoctrine()->getManager();
-
-        $order = $this->getDoctrine()->getRepository(Order::class)->find($order_id);
-        $product = $this->getDoctrine()->getRepository(Product::class)->find(11);
-
-
-        $order->addProduct($product);
-
-        $em->persist($order);
-        $em->persist($product);
-
-        $em->flush();
-
-        dump($order->getProducts());
-        foreach ($order->getProducts() as $product){
-            echo $product->getName();
-        }
-
-        dump($order);
-
-        return $this->render('RabotaBundle:Default:rabota.html.twig');
-    }
-
-    public function saveOrderAction(){
-
-        $em = $this->getDoctrine()->getManager();
-
-
-        $product = new Product();
-        $product->setPrice(100);
-        $product->setName('name');
-
-
-
-        $order = new Order();
-        $order->setTotal('1000');
-        $order->setUserId('1');
-        $order->addProduct($product);
-
-
-        $em->persist($order);
-        $em->persist($product);
-
-        $em->flush();
-
-
-        dump($product);
-        dump($order);
-
-
-
-        return $this->render('RabotaBundle:Default:rabota.html.twig');
-    }
 
     public function getProductListAction(){
 
         $db = $this->getDoctrine()->getRepository(Product::class);
         $products = $db->findAll();
 
-        //dump($products);
-
         return $this->render('RabotaBundle:Default:products.html.twig',['products' => $products]);
+    }
+
+    public function getOrderListAction(){
+        $user = $this->get('security.token_storage')->getToken()->getUser();
+
+        $db = $this->getDoctrine()->getRepository(Order::class);
+
+        $orders = $db->findBy(['user_id' => $user->getId() ]);
+        return $this->render('RabotaBundle:Default:orders.html.twig',['orders' => $orders]);
     }
 
     public function newOrderAction()
     {
-        $products = $this->getRequest()->request->all();
+        $user = $this->get('security.token_storage')->getToken()->getUser();
 
-        if(count($products)>1){
+        $products = $this->getRequest()->request->all();
+        $products = json_decode($products['cart_list']);
+
+        if(count($products)>=1){
             $order = new Order();
             $em = $this->getDoctrine()->getManager();
             $total = 0;
 
-            foreach ($products as $id => $count){
-                $product = $this->getDoctrine()->getRepository(Product::class)->find($id);
-                $total += ($product->getPrice() * $count);
-                if($count>0){
-                    $order->addProduct($product);
-                }
+            foreach ($products as $product){
+                $db_product = $this->getDoctrine()->getRepository(Product::class)->find($product->product_id);
+                $total += ($db_product->getPrice() * $product->product_quantity);
+                $order->addProduct($db_product);
             }
 
             $order->setTotal($total);
-            $order->setUserId('1');
+            $order->setUserId($user->getId());
 
             $em->persist($order);
             $em->flush();
         }
 
 
+        return new Response('order add');
+    }
+
+    public function newProductAction()
+    {
+        $request = $this->getRequest()->request->all();
+
+        $product = new Product();
+        $product->setName($request['product_name']);
+        $product->setPrice(round($request['product_price']));
+        $em = $this->getDoctrine()->getManager();
+
+        $em->persist($product);
+        $em->flush();
+
         return new Response();
     }
 
+    public function delOrderAction(Order $order){
 
-    public function getOrderListAction(){
+            $em = $this->getDoctrine()->getManager();
+            $em->remove($order);
+            $em->flush();
 
-        $db = $this->getDoctrine()->getRepository(Order::class);
-        $orders = $db->findAll();
-        dump($orders);
 
-        return $this->render('RabotaBundle:Default:rabota.html.twig');
+            //return $this->redirectToRoute('product_list');
+            return new Response('order del');
     }
+
+    public function delProductAction(Product $product){
+
+        $em = $this->getDoctrine()->getManager();
+        $em->remove($product);
+        $em->flush();
+
+        //return $this->redirectToRoute('order_list');
+        return new Response('product del');
+    }
+
+    public function editProductAction(Product $product){
+
+        $inputs = $this->getRequest()->request->all();
+
+
+        $em = $this->getDoctrine()->getManager();
+        $product->setName($inputs['name']);
+        $product->setPrice($inputs['price']);
+        $em->persist($product);
+        $em->flush();
+
+        //return $this->redirectToRoute('order_list');
+        return new Response('product update');
+
+    }
+
+    public function editOrderAction(Order $order){
+
+        $em = $this->getDoctrine()->getManager();
+        $em->remove($order);
+        $em->flush();
+
+        return $this->redirectToRoute('order_list');
+    }
+
+    public function showOrderAction(Order $order){
+
+        return $this->render('RabotaBundle:Default:showOrder.html.twig', array(
+            'order' => $order,
+            'products' => $order->getProducts(),
+        ));
+    }
+
 }

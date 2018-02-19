@@ -1,49 +1,177 @@
-{% extends 'base.html.twig' %}
+{% extends 'RabotaBundle:Default:base.html.twig' %}
 
 {% block body %}
-    <h1>Products <span><a href="{{ path('product_new') }}" class="btn btn-default">+</a></span></h1>
 
-    <table class="table">
+    <div class="col-md-12">
+        <h1>Товары</h1>
+    </div>
+
+    <div class="col-md-8">
+
+<div class="table-responsive">
+    <table class="table" id="product_table">
         <thead>
             <tr>
+                <th></th>
                 <th>Name</th>
                 <th>Price</th>
-                <th>Quantity</th>
+                <th>Btn</th>
             </tr>
         </thead>
         <tbody>
-        <form id="products">
         {% for product in products %}
-            <tr>
-                <td>{{ product.name }}</td>
-                <td>{{ product.price }}</td>
-                <td><input type="number" value="1" name="{{product.id}}" class="form-control product"></td>
-                <td>
-                <a href="{{ path('product_show', { 'id': product.id }) }}" class="btn btn-default">R</a>
-                <a href="{{ path('product_show', { 'id': product.id }) }}" class="btn btn-default">U</a>
-                <a href="{{ path('product_show', { 'id': product.id }) }}" class="btn btn-default">D</a>
-                <a href="{{ path('product_show', { 'id': product.id }) }}" class="btn btn-success">Купить</a>
-                </td>
-            </tr>
+
+                <tr class="sc-product-item">
+
+                    <td class="col-md-1">
+                        <button type="button" class="btn btn-default del" data-url="{{ path('product_del', { 'id': product.id }) }}">
+                            <span class="fa fa-eye" aria-hidden="true"></span>
+                        </button>
+                    </td>
+
+                    <td class="col-md-2">
+                        <input type="text" value="{{ product.name }}" name="name" class="form-control product" id="product-name-{{ product.id }}">
+                        <div style="display: none" data-name="product_name">{{ product.name }}</div>
+                    </td>
+                    <td class="col-md-2">
+                        <input type="number" value="{{ product.price }}" name="product_price" class="form-control product" id="product-price-{{ product.id }}">
+                    </td>
+                            <td>
+                                <input type="hidden" value="{{product.id}}" name="product_id" class="form-control product">
+                                <button type="button" class="btn btn-primary edit" data-id="{{ product.id }}" data-url="{{ path('product_edit', { 'id': product.id }) }}">
+                                    <span class="fa fa-save fa-lg" aria-hidden="true"></span>
+                                </button>
+
+                                <button type="button" class="btn btn-danger del"  data-url="{{ path('product_del', { 'id': product.id }) }}">
+                                    <span class="fa fa-trash-o fa-lg" aria-hidden="true"></span>
+                                </button>
+
+                                <button type="button" class="sc-add-to-cart btn btn-default"  data-url="{{ path('product_del', { 'id': product.id }) }}">
+                                    <span class="fa fa-cart-plus fa-lg" aria-hidden="true"></span>
+                                </button>
+                            </td>
+
+                </tr>
         {% endfor %}
-        </form>
         </tbody>
 
     </table>
+    </div>
+    </div>
 
     {#<p><a href="{{ path('product_new') }}" class="btn btn-success new-order">Оформить заказ</a></p>#}
-    <p><a href="#" class="btn btn-success new-order">Оформить заказ</a></p>
+
+    <div class="col-md-4">
+    {% if app.user %}
+        <form action="results.php" method="POST">
+            <!-- SmartCart element -->
+            <div id="smartcart"></div>
+        </form>
+    {% endif %}
+    </div>
+
+    {% if app.user %}
+        <hr>
+        <div class="row">
+            <div class="col-md-12">
+
+                <p>Добавить новый товар:</p>
+                <form class="form-inline" id="form-new-product">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Название" id="new_name_input" name="product_name">
+                    </div>
+                    <div class="form-group">
+                        <input type="number" class="form-control" placeholder="Цена" id="new_price_input" name="product_price">
+                    </div>
+                    <button type="submit" class="btn btn-default save">Сохранить</button>
+                </form>
+
+            </div>
+        </div>
+    {% endif %}
+
+
 {% endblock %}
 
 
 {% block javascripts %}
-    <script src="https://yastatic.net/jquery/3.1.1/jquery.min.js"></script>
     <script>
         $(".new-order").click(function() {
             $.post("{{ (path('order_new')) }}", $("#products").serialize(), function()
             {
-                alert('Заказ добавлен');
+               alert($("#products").serialize());
             });
         });
+
+
+        $(".del").click(function() {
+
+            //var url = '/order/'+$(this).attr("data_id")+'/del';
+            var url = $(this).attr("data-url");
+            var tr = $(this);
+
+            $.post(url, "del", function()
+            {
+                tr.closest("tr").hide('slow', function(){ tr.closest("tr").remove(); });
+
+            });
+
+            return false;
+        });
+
+        $(".save").click(function() {
+            var url = "{{path('product_new')}}";
+            var data = $("#form-new-product");
+            console.log(data);
+            var data = $("#form-new-product").serialize();
+
+            $.post(url, data, function()
+            {
+                var tableBody = $('#product_table').find("tbody"),
+                    trLast = tableBody.find("tr:last"),
+                    trNew = trLast.clone();
+
+                trNew.find("input[name*='name']").val($("input[id='new_name_input']").val());
+                trNew.find("input[name*='price']").val($("input[id='new_price_input']").val());
+
+                trLast.after(trNew);
+            });
+
+            return false;
+        });
+
+        $(".edit").click(function() {
+            var url = $(this).attr("data-url");
+            var id = $(this).attr("data-id");
+            var data = {};
+            data.name = $("#product-name-"+id).val();
+            data.price = $("#product-price-"+id).val();
+
+            $.post(url, data, function()
+            {
+
+            });
+
+            return false;
+        });
+
+        $(document).ready(function(){
+            // Initialize Smart Cart
+            $('#smartcart').smartCart({
+                lang: {
+                    cartEmpty: 'Для формирования заказа добавьте товары в корзину.',
+                    checkout: 'Сохранить заказ',
+                    cartTitle: "Корзина",
+                    clear: 'Очистить',
+                    subtotal: 'Всего:'
+                },
+                submitSettings:{
+                    submitType:'ajax',
+                    ajaxURL:'{{path('order_new')}}'
+                }
+
+            });
+        });
+
     </script>
 {% endblock %}

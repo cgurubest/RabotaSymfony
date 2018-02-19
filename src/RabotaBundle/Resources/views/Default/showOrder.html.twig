@@ -1,0 +1,41 @@
+{% extends 'RabotaBundle:Default:base.html.twig' %}
+
+{% block body %}
+    <h1>Заказ {{ order.id }}</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Сумма</th>
+                <td>{{ order.total }} руб.</td>
+            </tr>
+            <tr>
+                <th>User_id</th>
+                <td>{{ order.userid }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <h4>Продукты по заказу</h4>
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+        </tr>
+        </thead>
+        <tbody>
+        <form id="products">
+            {% for product in products %}
+                <tr>
+                    <td>{{ product.id }}</td>
+                    <td>{{ product.name }}</td>
+                </tr>
+            {% endfor %}
+        </form>
+        </tbody>
+
+    </table>
+{% endblock %}

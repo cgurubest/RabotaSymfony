@@ -1,0 +1,168 @@
+2018/02/19 09:36:55 [error] 16135#16135: *2579 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Symfony\Component\Yaml\Exception\ParseException: Indentation problem at line 17 (near "    providers:"). in /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Parser.php:461
+Stack trace:
+#0 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Parser.php(246): Symfony\Component\Yaml\Parser->getNextEmbedBlock()
+#1 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Parser.php(78): Symfony\Component\Yaml\Parser->doParse('security:\n     ...', false, false, false)
+#2 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Loader/YamlFileLoader.php(364): Symfony\Component\Yaml\Parser->parse('# To get starte...')
+#3 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Loader/YamlFileLoader.php(44): Symfony\Component\DependencyInjection\Loader\YamlFileLoader->loadFile('/var/apps/symfo...')
+#4 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Config/Loader/F" while reading response header from upstream, client: 178.34.158.49, server: symfony.dev, request: "POST /product/new HTTP/1.1", upstream: "fastcgi://unix:/run/php/php7.0-fpm.sock:", host: "symfony.dev", referrer: "http://symfony.dev/"
+2018/02/19 09:36:56 [error] 16135#16135: *2579 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Symfony\Component\Yaml\Exception\ParseException: Indentation problem at line 17 (near "    providers:"). in /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Parser.php:461
+Stack trace:
+#0 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Parser.php(246): Symfony\Component\Yaml\Parser->getNextEmbedBlock()
+#1 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Parser.php(78): Symfony\Component\Yaml\Parser->doParse('security:\n     ...', false, false, false)
+#2 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Loader/YamlFileLoader.php(364): Symfony\Component\Yaml\Parser->parse('# To get starte...')
+#3 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Loader/YamlFileLoader.php(44): Symfony\Component\DependencyInjection\Loader\YamlFileLoader->loadFile('/var/apps/symfo...')
+#4 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Config/Loader/F" while reading response header from upstream, client: 178.34.158.49, server: symfony.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/run/php/php7.0-fpm.sock:", host: "symfony.dev", referrer: "http://symfony.dev/"
+2018/02/19 09:37:00 [error] 16135#16135: *2579 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Symfony\Component\Yaml\Exception\ParseException: Indentation problem at line 17 (near "    providers:"). in /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Parser.php:461
+Stack trace:
+#0 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Parser.php(246): Symfony\Component\Yaml\Parser->getNextEmbedBlock()
+#1 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Parser.php(78): Symfony\Component\Yaml\Parser->doParse('security:\n     ...', false, false, false)
+#2 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Loader/YamlFileLoader.php(364): Symfony\Component\Yaml\Parser->parse('# To get starte...')
+#3 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Loader/YamlFileLoader.php(44): Symfony\Component\DependencyInjection\Loader\YamlFileLoader->loadFile('/var/apps/symfo...')
+#4 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Config/Loader/F" while reading response header from upstream, client: 178.34.158.49, server: symfony.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/run/php/php7.0-fpm.sock:", host: "symfony.dev", referrer: "http://symfony.dev/order-list"
+2018/02/19 09:37:02 [error] 16135#16135: *2579 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Symfony\Component\Yaml\Exception\ParseException: Indentation problem at line 17 (near "    providers:"). in /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Parser.php:461
+Stack trace:
+#0 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Parser.php(246): Symfony\Component\Yaml\Parser->getNextEmbedBlock()
+#1 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Parser.php(78): Symfony\Component\Yaml\Parser->doParse('security:\n     ...', false, false, false)
+#2 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Loader/YamlFileLoader.php(364): Symfony\Component\Yaml\Parser->parse('# To get starte...')
+#3 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Loader/YamlFileLoader.php(44): Symfony\Component\DependencyInjection\Loader\YamlFileLoader->loadFile('/var/apps/symfo...')
+#4 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Config/Loader/F" while reading response header from upstream, client: 178.34.158.49, server: symfony.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/run/php/php7.0-fpm.sock:", host: "symfony.dev"
+2018/02/19 09:37:07 [error] 16135#16135: *2579 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Symfony\Component\Yaml\Exception\ParseException: Indentation problem at line 17 (near "    providers:"). in /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Parser.php:461
+Stack trace:
+#0 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Parser.php(246): Symfony\Component\Yaml\Parser->getNextEmbedBlock()
+#1 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Parser.php(78): Symfony\Component\Yaml\Parser->doParse('security:\n     ...', false, false, false)
+#2 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Loader/YamlFileLoader.php(364): Symfony\Component\Yaml\Parser->parse('# To get starte...')
+#3 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Loader/YamlFileLoader.php(44): Symfony\Component\DependencyInjection\Loader\YamlFileLoader->loadFile('/var/apps/symfo...')
+#4 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Config/Loader/F" while reading response header from upstream, client: 178.34.158.49, server: symfony.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/run/php/php7.0-fpm.sock:", host: "symfony.dev", referrer: "http://symfony.dev/order-list"
+2018/02/19 09:37:15 [error] 16135#16135: *2579 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Symfony\Component\Yaml\Exception\ParseException: Indentation problem at line 17 (near "    providers:"). in /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Parser.php:461
+Stack trace:
+#0 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Parser.php(246): Symfony\Component\Yaml\Parser->getNextEmbedBlock()
+#1 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Parser.php(78): Symfony\Component\Yaml\Parser->doParse('security:\n     ...', false, false, false)
+#2 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Loader/YamlFileLoader.php(364): Symfony\Component\Yaml\Parser->parse('# To get starte...')
+#3 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Loader/YamlFileLoader.php(44): Symfony\Component\DependencyInjection\Loader\YamlFileLoader->loadFile('/var/apps/symfo...')
+#4 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Config/Loader/F" while reading response header from upstream, client: 178.34.158.49, server: symfony.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/run/php/php7.0-fpm.sock:", host: "symfony.dev", referrer: "http://symfony.dev/order-list"
+2018/02/19 09:37:16 [error] 16135#16135: *2579 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Symfony\Component\Yaml\Exception\ParseException: Indentation problem at line 17 (near "    providers:"). in /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Parser.php:461
+Stack trace:
+#0 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Parser.php(246): Symfony\Component\Yaml\Parser->getNextEmbedBlock()
+#1 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Parser.php(78): Symfony\Component\Yaml\Parser->doParse('security:\n     ...', false, false, false)
+#2 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Loader/YamlFileLoader.php(364): Symfony\Component\Yaml\Parser->parse('# To get starte...')
+#3 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Loader/YamlFileLoader.php(44): Symfony\Component\DependencyInjection\Loader\YamlFileLoader->loadFile('/var/apps/symfo...')
+#4 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Config/Loader/F" while reading response header from upstream, client: 178.34.158.49, server: symfony.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/run/php/php7.0-fpm.sock:", host: "symfony.dev", referrer: "http://symfony.dev/order-list"
+2018/02/19 09:37:17 [error] 16135#16135: *2579 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Symfony\Component\Yaml\Exception\ParseException: Indentation problem at line 17 (near "    providers:"). in /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Parser.php:461
+Stack trace:
+#0 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Parser.php(246): Symfony\Component\Yaml\Parser->getNextEmbedBlock()
+#1 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Parser.php(78): Symfony\Component\Yaml\Parser->doParse('security:\n     ...', false, false, false)
+#2 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Loader/YamlFileLoader.php(364): Symfony\Component\Yaml\Parser->parse('# To get starte...')
+#3 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Loader/YamlFileLoader.php(44): Symfony\Component\DependencyInjection\Loader\YamlFileLoader->loadFile('/var/apps/symfo...')
+#4 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Config/Loader/F" while reading response header from upstream, client: 178.34.158.49, server: symfony.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/run/php/php7.0-fpm.sock:", host: "symfony.dev", referrer: "http://symfony.dev/order-list"
+2018/02/19 09:37:17 [error] 16135#16135: *2579 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Symfony\Component\Yaml\Exception\ParseException: Indentation problem at line 17 (near "    providers:"). in /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Parser.php:461
+Stack trace:
+#0 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Parser.php(246): Symfony\Component\Yaml\Parser->getNextEmbedBlock()
+#1 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Parser.php(78): Symfony\Component\Yaml\Parser->doParse('security:\n     ...', false, false, false)
+#2 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Loader/YamlFileLoader.php(364): Symfony\Component\Yaml\Parser->parse('# To get starte...')
+#3 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Loader/YamlFileLoader.php(44): Symfony\Component\DependencyInjection\Loader\YamlFileLoader->loadFile('/var/apps/symfo...')
+#4 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Config/Loader/F" while reading response header from upstream, client: 178.34.158.49, server: symfony.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/run/php/php7.0-fpm.sock:", host: "symfony.dev", referrer: "http://symfony.dev/order-list"
+2018/02/19 09:38:03 [error] 16135#16135: *2579 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Symfony\Component\Yaml\Exception\ParseException: Indentation problem at line 17 (near "    providers:"). in /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Parser.php:461
+Stack trace:
+#0 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Parser.php(246): Symfony\Component\Yaml\Parser->getNextEmbedBlock()
+#1 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Parser.php(78): Symfony\Component\Yaml\Parser->doParse('security:\n     ...', false, false, false)
+#2 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Loader/YamlFileLoader.php(364): Symfony\Component\Yaml\Parser->parse('# To get starte...')
+#3 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Loader/YamlFileLoader.php(44): Symfony\Component\DependencyInjection\Loader\YamlFileLoader->loadFile('/var/apps/symfo...')
+#4 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Config/Loader/F" while reading response header from upstream, client: 178.34.158.49, server: symfony.dev, request: "GET /login HTTP/1.1", upstream: "fastcgi://unix:/run/php/php7.0-fpm.sock:", host: "symfony.dev"
+2018/02/19 09:40:12 [error] 16135#16135: *2594 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Symfony\Component\Yaml\Exception\ParseException: Indentation problem at line 17 (near "    providers:"). in /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Parser.php:461
+Stack trace:
+#0 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Parser.php(246): Symfony\Component\Yaml\Parser->getNextEmbedBlock()
+#1 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Parser.php(78): Symfony\Component\Yaml\Parser->doParse('security:\n     ...', false, false, false)
+#2 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Loader/YamlFileLoader.php(364): Symfony\Component\Yaml\Parser->parse('# To get starte...')
+#3 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Loader/YamlFileLoader.php(44): Symfony\Component\DependencyInjection\Loader\YamlFileLoader->loadFile('/var/apps/symfo...')
+#4 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Config/Loader/F" while reading response header from upstream, client: 178.34.158.49, server: symfony.dev, request: "GET /order-list HTTP/1.1", upstream: "fastcgi://unix:/run/php/php7.0-fpm.sock:", host: "symfony.dev"
+2018/02/19 09:41:05 [error] 16135#16135: *2594 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Symfony\Component\Yaml\Exception\ParseException: Indentation problem at line 17 (near "    providers:"). in /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Parser.php:461
+Stack trace:
+#0 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Parser.php(246): Symfony\Component\Yaml\Parser->getNextEmbedBlock()
+#1 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Parser.php(78): Symfony\Component\Yaml\Parser->doParse('security:\n     ...', false, false, false)
+#2 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Loader/YamlFileLoader.php(364): Symfony\Component\Yaml\Parser->parse('# To get starte...')
+#3 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Loader/YamlFileLoader.php(44): Symfony\Component\DependencyInjection\Loader\YamlFileLoader->loadFile('/var/apps/symfo...')
+#4 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Config/Loader/F" while reading response header from upstream, client: 178.34.158.49, server: symfony.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/run/php/php7.0-fpm.sock:", host: "symfony.dev"
+2018/02/19 09:50:12 [error] 16135#16135: *2601 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Symfony\Component\Yaml\Exception\ParseException: Indentation problem at line 17 (near "    providers:"). in /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Parser.php:461
+Stack trace:
+#0 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Parser.php(246): Symfony\Component\Yaml\Parser->getNextEmbedBlock()
+#1 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Parser.php(78): Symfony\Component\Yaml\Parser->doParse('security:\n     ...', false, false, false)
+#2 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Loader/YamlFileLoader.php(364): Symfony\Component\Yaml\Parser->parse('# To get starte...')
+#3 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Loader/YamlFileLoader.php(44): Symfony\Component\DependencyInjection\Loader\YamlFileLoader->loadFile('/var/apps/symfo...')
+#4 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Config/Loader/F" while reading response header from upstream, client: 23.20.54.152, server: symfony.dev, request: "HEAD / HTTP/1.1", upstream: "fastcgi://unix:/run/php/php7.0-fpm.sock:", host: "188.166.122.111"
+2018/02/19 09:50:13 [error] 16135#16135: *2603 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Symfony\Component\Yaml\Exception\ParseException: Indentation problem at line 17 (near "    providers:"). in /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Parser.php:461
+Stack trace:
+#0 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Parser.php(246): Symfony\Component\Yaml\Parser->getNextEmbedBlock()
+#1 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Parser.php(78): Symfony\Component\Yaml\Parser->doParse('security:\n     ...', false, false, false)
+#2 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Loader/YamlFileLoader.php(364): Symfony\Component\Yaml\Parser->parse('# To get starte...')
+#3 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Loader/YamlFileLoader.php(44): Symfony\Component\DependencyInjection\Loader\YamlFileLoader->loadFile('/var/apps/symfo...')
+#4 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Config/Loader/F" while reading response header from upstream, client: 23.20.54.152, server: symfony.dev, request: "GET /clientaccesspolicy.xml HTTP/1.1", upstream: "fastcgi://unix:/run/php/php7.0-fpm.sock:", host: "188.166.122.111"
+2018/02/19 16:53:42 [error] 16135#16135: *3200 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Symfony\Component\Yaml\Exception\ParseException: Unexpected characters near "/del, role: ROLE_USER }" at line 35 (near "- { path: ^/order/{id}/del, role: ROLE_USER }"). in /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Inline.php:76
+Stack trace:
+#0 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Parser.php(536): Symfony\Component\Yaml\Inline::parse('{ path: ^/order...', false, false, false, Array)
+#1 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Parser.php(153): Symfony\Component\Yaml\Parser->parseValue('{ path: ^/order...', false, false, false, 'sequence')
+#2 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Parser.php(320): Symfony\Component\Yaml\Parser->doParse('- { path: ^/log...', false, false, false)
+#3 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Parser.php(246): Symfony\Component\Yaml\Parser->parseBlock(30, '- { path: ^/log...', false, false, false)
+#4 /va" while reading response header from upstream, client: 178.34.158.49, server: symfony.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/run/php/php7.0-fpm.sock:", host: "symfony.dev", referrer: "http://symfony.dev/"
+2018/02/19 16:53:43 [error] 16135#16135: *3200 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Symfony\Component\Yaml\Exception\ParseException: Unexpected characters near "/del, role: ROLE_USER }" at line 35 (near "- { path: ^/order/{id}/del, role: ROLE_USER }"). in /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Inline.php:76
+Stack trace:
+#0 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Parser.php(536): Symfony\Component\Yaml\Inline::parse('{ path: ^/order...', false, false, false, Array)
+#1 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Parser.php(153): Symfony\Component\Yaml\Parser->parseValue('{ path: ^/order...', false, false, false, 'sequence')
+#2 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Parser.php(320): Symfony\Component\Yaml\Parser->doParse('- { path: ^/log...', false, false, false)
+#3 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Parser.php(246): Symfony\Component\Yaml\Parser->parseBlock(30, '- { path: ^/log...', false, false, false)
+#4 /va" while reading response header from upstream, client: 178.34.158.49, server: symfony.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/run/php/php7.0-fpm.sock:", host: "symfony.dev", referrer: "http://symfony.dev/"
+2018/02/19 16:53:44 [error] 16135#16135: *3200 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Symfony\Component\Yaml\Exception\ParseException: Unexpected characters near "/del, role: ROLE_USER }" at line 35 (near "- { path: ^/order/{id}/del, role: ROLE_USER }"). in /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Inline.php:76
+Stack trace:
+#0 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Parser.php(536): Symfony\Component\Yaml\Inline::parse('{ path: ^/order...', false, false, false, Array)
+#1 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Parser.php(153): Symfony\Component\Yaml\Parser->parseValue('{ path: ^/order...', false, false, false, 'sequence')
+#2 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Parser.php(320): Symfony\Component\Yaml\Parser->doParse('- { path: ^/log...', false, false, false)
+#3 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Parser.php(246): Symfony\Component\Yaml\Parser->parseBlock(30, '- { path: ^/log...', false, false, false)
+#4 /va" while reading response header from upstream, client: 178.34.158.49, server: symfony.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/run/php/php7.0-fpm.sock:", host: "symfony.dev", referrer: "http://symfony.dev/"
+2018/02/19 16:53:44 [error] 16135#16135: *3200 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Symfony\Component\Yaml\Exception\ParseException: Unexpected characters near "/del, role: ROLE_USER }" at line 35 (near "- { path: ^/order/{id}/del, role: ROLE_USER }"). in /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Inline.php:76
+Stack trace:
+#0 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Parser.php(536): Symfony\Component\Yaml\Inline::parse('{ path: ^/order...', false, false, false, Array)
+#1 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Parser.php(153): Symfony\Component\Yaml\Parser->parseValue('{ path: ^/order...', false, false, false, 'sequence')
+#2 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Parser.php(320): Symfony\Component\Yaml\Parser->doParse('- { path: ^/log...', false, false, false)
+#3 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Parser.php(246): Symfony\Component\Yaml\Parser->parseBlock(30, '- { path: ^/log...', false, false, false)
+#4 /va" while reading response header from upstream, client: 178.34.158.49, server: symfony.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/run/php/php7.0-fpm.sock:", host: "symfony.dev", referrer: "http://symfony.dev/"
+2018/02/19 16:53:44 [error] 16135#16135: *3200 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Symfony\Component\Yaml\Exception\ParseException: Unexpected characters near "/del, role: ROLE_USER }" at line 35 (near "- { path: ^/order/{id}/del, role: ROLE_USER }"). in /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Inline.php:76
+Stack trace:
+#0 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Parser.php(536): Symfony\Component\Yaml\Inline::parse('{ path: ^/order...', false, false, false, Array)
+#1 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Parser.php(153): Symfony\Component\Yaml\Parser->parseValue('{ path: ^/order...', false, false, false, 'sequence')
+#2 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Parser.php(320): Symfony\Component\Yaml\Parser->doParse('- { path: ^/log...', false, false, false)
+#3 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Parser.php(246): Symfony\Component\Yaml\Parser->parseBlock(30, '- { path: ^/log...', false, false, false)
+#4 /va" while reading response header from upstream, client: 178.34.158.49, server: symfony.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/run/php/php7.0-fpm.sock:", host: "symfony.dev", referrer: "http://symfony.dev/"
+2018/02/19 16:54:40 [error] 16135#16135: *3200 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Symfony\Component\Yaml\Exception\ParseException: Unexpected characters near "/del, role: ROLE_USER }" at line 35 (near "- { path: ^/order/{id}/del, role: ROLE_USER }"). in /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Inline.php:76
+Stack trace:
+#0 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Parser.php(536): Symfony\Component\Yaml\Inline::parse('{ path: ^/order...', false, false, false, Array)
+#1 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Parser.php(153): Symfony\Component\Yaml\Parser->parseValue('{ path: ^/order...', false, false, false, 'sequence')
+#2 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Parser.php(320): Symfony\Component\Yaml\Parser->doParse('- { path: ^/log...', false, false, false)
+#3 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Parser.php(246): Symfony\Component\Yaml\Parser->parseBlock(30, '- { path: ^/log...', false, false, false)
+#4 /va" while reading response header from upstream, client: 178.34.158.49, server: symfony.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/run/php/php7.0-fpm.sock:", host: "symfony.dev", referrer: "http://symfony.dev/"
+2018/02/19 16:54:50 [error] 16135#16135: *3200 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Symfony\Component\Yaml\Exception\ParseException: Unexpected characters near "/del, role: ROLE_USER }" at line 35 (near "- { path: ^/order/{id}/del, role: ROLE_USER }"). in /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Inline.php:76
+Stack trace:
+#0 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Parser.php(536): Symfony\Component\Yaml\Inline::parse('{ path: ^/order...', false, false, false, Array)
+#1 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Parser.php(153): Symfony\Component\Yaml\Parser->parseValue('{ path: ^/order...', false, false, false, 'sequence')
+#2 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Parser.php(320): Symfony\Component\Yaml\Parser->doParse('- { path: ^/log...', false, false, false)
+#3 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Parser.php(246): Symfony\Component\Yaml\Parser->parseBlock(30, '- { path: ^/log...', false, false, false)
+#4 /va" while reading response header from upstream, client: 178.34.158.49, server: symfony.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/run/php/php7.0-fpm.sock:", host: "symfony.dev", referrer: "http://symfony.dev/"
+2018/02/19 16:54:51 [error] 16135#16135: *3200 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Symfony\Component\Yaml\Exception\ParseException: Unexpected characters near "/del, role: ROLE_USER }" at line 35 (near "- { path: ^/order/{id}/del, role: ROLE_USER }"). in /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Inline.php:76
+Stack trace:
+#0 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Parser.php(536): Symfony\Component\Yaml\Inline::parse('{ path: ^/order...', false, false, false, Array)
+#1 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Parser.php(153): Symfony\Component\Yaml\Parser->parseValue('{ path: ^/order...', false, false, false, 'sequence')
+#2 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Parser.php(320): Symfony\Component\Yaml\Parser->doParse('- { path: ^/log...', false, false, false)
+#3 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Parser.php(246): Symfony\Component\Yaml\Parser->parseBlock(30, '- { path: ^/log...', false, false, false)
+#4 /va" while reading response header from upstream, client: 178.34.158.49, server: symfony.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/run/php/php7.0-fpm.sock:", host: "symfony.dev", referrer: "http://symfony.dev/"
+2018/02/19 16:54:51 [error] 16135#16135: *3200 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Symfony\Component\Yaml\Exception\ParseException: Unexpected characters near "/del, role: ROLE_USER }" at line 35 (near "- { path: ^/order/{id}/del, role: ROLE_USER }"). in /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Inline.php:76
+Stack trace:
+#0 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Parser.php(536): Symfony\Component\Yaml\Inline::parse('{ path: ^/order...', false, false, false, Array)
+#1 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Parser.php(153): Symfony\Component\Yaml\Parser->parseValue('{ path: ^/order...', false, false, false, 'sequence')
+#2 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Parser.php(320): Symfony\Component\Yaml\Parser->doParse('- { path: ^/log...', false, false, false)
+#3 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Parser.php(246): Symfony\Component\Yaml\Parser->parseBlock(30, '- { path: ^/log...', false, false, false)
+#4 /va" while reading response header from upstream, client: 178.34.158.49, server: symfony.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/run/php/php7.0-fpm.sock:", host: "symfony.dev", referrer: "http://symfony.dev/"
+2018/02/19 16:54:51 [error] 16135#16135: *3200 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Symfony\Component\Yaml\Exception\ParseException: Unexpected characters near "/del, role: ROLE_USER }" at line 35 (near "- { path: ^/order/{id}/del, role: ROLE_USER }"). in /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Inline.php:76
+Stack trace:
+#0 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Parser.php(536): Symfony\Component\Yaml\Inline::parse('{ path: ^/order...', false, false, false, Array)
+#1 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Parser.php(153): Symfony\Component\Yaml\Parser->parseValue('{ path: ^/order...', false, false, false, 'sequence')
+#2 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Parser.php(320): Symfony\Component\Yaml\Parser->doParse('- { path: ^/log...', false, false, false)
+#3 /var/apps/symfony/vendor/symfony/symfony/src/Symfony/Component/Yaml/Parser.php(246): Symfony\Component\Yaml\Parser->parseBlock(30, '- { path: ^/log...', false, false, false)
+#4 /va" while reading response header from upstream, client: 178.34.158.49, server: symfony.dev, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/run/php/php7.0-fpm.sock:", host: "symfony.dev", referrer: "http://symfony.dev/"

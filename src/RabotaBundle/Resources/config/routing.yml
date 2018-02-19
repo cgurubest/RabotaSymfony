@@ -1,31 +1,32 @@
-rabota_homepage:
-    path:     /rabota/
-    defaults: { _controller: RabotaBundle:Default:index }
-
-test_page:
-    path: /rabota/rabota/
-    defaults: { _controller: RabotaBundle:Default:rabota }
-
-save_order:
-      path: /order-save
-      defaults: { _controller: RabotaBundle:Default:saveOrder}
-
-save_product:
-      path: /product-save
-      defaults: { _controller: RabotaBundle:Default:saveProduct}
-
 products_list:
-    path: /product-list
+    path: /
     defaults: { _controller: RabotaBundle:Default:getProductList}
-
-order_list:
-    path: /order-list
-    defaults: { _controller: RabotaBundle:Default:getOrderList}
 
 order_new:
     path: /order/new
     defaults: { _controller: RabotaBundle:Default:newOrder}
 
-add_product_to_order:
-    path: /add-product
-    defaults: { _controller: RabotaBundle:Default:addProductToOrder}
+product_new:
+    path: /product/new
+    defaults: { _controller: RabotaBundle:Default:newProduct}
+
+order_list:
+    path: /order-list
+    defaults: { _controller: RabotaBundle:Default:getOrderList}
+
+order_del:
+    path: /ajax/order/{id}/del
+    defaults: { _controller: RabotaBundle:Default:delOrder}
+
+product_del:
+    path: /ajax/product/{id}/del
+    defaults: { _controller: RabotaBundle:Default:delProduct}
+
+product_edit:
+    path: /ajax/product/{id}/edit
+    defaults: { _controller: RabotaBundle:Default:editProduct}
+
+order_show:
+    path: /order/{id}
+    defaults: { _controller: RabotaBundle:Default:showOrder}
+

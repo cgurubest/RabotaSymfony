@@ -38,6 +38,14 @@ twig:
     form:
         resources: ['bootstrap_3_layout.html.twig']
 
+fos_user:
+    db_driver: orm # other valid values are 'mongodb' and 'couchdb'
+    firewall_name: main
+    user_class: RabotaBundle\Entity\User
+    from_email:
+        address: "%mailer_user%"
+        sender_name: "%mailer_user%"
+
 # Doctrine Configuration
 doctrine:
     dbal:

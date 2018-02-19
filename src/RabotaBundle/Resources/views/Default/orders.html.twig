@@ -1,29 +1,31 @@
-{% extends 'base.html.twig' %}
+{% extends 'RabotaBundle:Default:base.html.twig' %}
 
 {% block body %}
-    <h1>Products <span><a href="{{ path('product_new') }}" class="btn btn-default">+</a></span></h1>
+    <h1>Orders</h1>
 
     <table class="table">
         <thead>
             <tr>
-                <th>Name</th>
-                <th>Price</th>
-                <th>Quantity</th>
-                <th>See</th>
-                <th>+</th>
+                <th>Id</th>
+                <th>Total</th>
+                <th>User ID</th>
             </tr>
         </thead>
         <tbody>
         <form id="products">
-        {% for product in products %}
+        {% for order in orders %}
             <tr>
-                <td>{{ product.name }}</td>
-                <td>{{ product.price }}</td>
-                <td><input type="number" value="1" name="{{product.id}}" class="product"></td>
-                <td><a href="{{ path('product_show', { 'id': product.id }) }}" class="btn btn-default">View</a></td>
-                <td><a href="{{ path('product_show', { 'id': product.id }) }}" class="btn btn-default">Edit</a></td>
-                <td><a href="{{ path('product_show', { 'id': product.id }) }}" class="btn btn-default">Delete</a></td>
-                <td><a href="{{ path('product_show', { 'id': product.id }) }}" class="btn btn-success">Купить</a></td>
+                <td>{{ order.id }}</td>
+                <td>{{ order.total }}</td>
+                <td>{{ order.getUserId }}</td>
+                <td>
+                    <a href="{{ path('order_show', { 'id': order.id }) }}" class="btn btn-success">Подробно</a>
+                    <button type="button" class="btn btn-danger del" data-url="{{ path('order_del', { 'id': order.id }) }}">
+                        <span class="fa fa-trash-o fa-lg" aria-hidden="true"></span>
+                    </button>
+
+
+                </td>
             </tr>
         {% endfor %}
         </form>
@@ -32,18 +34,25 @@
     </table>
 
     {#<p><a href="{{ path('product_new') }}" class="btn btn-success new-order">Оформить заказ</a></p>#}
-    <p><a href="#" class="btn btn-success new-order">Оформить заказ</a></p>
+
 {% endblock %}
 
 
 {% block javascripts %}
-    <script src="https://yastatic.net/jquery/3.1.1/jquery.min.js"></script>
     <script>
-        $(".new-order").click(function() {
-            $.post("{{ (path('order_new')) }}", $("#products").serialize(), function()
+        $(".del").click(function() {
+
+            //var url = '/order/'+$(this).attr("data_id")+'/del';
+            var url = $(this).attr("data-url");
+            var tr = $(this);
+
+            $.post(url, "del", function()
             {
-                alert('Заказ добавлен');
+                tr.closest("tr").hide('slow', function(){ tr.closest("tr").remove(); });
+
             });
+
+            return false;
         });
     </script>
 {% endblock %}
